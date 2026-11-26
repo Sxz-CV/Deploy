@@ -176,6 +176,16 @@ ls -lh ~/smoke/best_fp16.engine
 | Total Host Walltime | 3.06886 s |
 | Total GPU Compute Time | 3.04778 s |
 
+**FP32 / FP16 对比（`--loadEngine`，200 次迭代）**
+
+| 精度 | GPU Compute 均值 | GPU Compute 中位数 | 端到端延迟中位数 | 吞吐 | 相对加速 |
+|---|---|---|---|---|---|
+| FP32 | 58.35 ms | 58.71 ms | 59.65 ms | 16.82 qps | 1.00x |
+| FP16 | 22.54 ms | 21.32 ms | 22.05 ms | 43.91 qps | **2.75x** |
+
+FP16 相对 FP32：延迟下降约 62%，吞吐提升约 2.6 倍。
+FP16 组 p99 出现一次约 90 ms 的尖峰，导致均值偏高；中位数 21.32 ms 更能代表稳态性能。
+
 ---
 
 ## 5. 上传 Git 仓库的命令（2026-11-26）
