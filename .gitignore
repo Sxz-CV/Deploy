@@ -1,0 +1,10 @@
+*.pt
+*.onnx
+*.engine
+*.mp4
+weights/
+dataset/
+__pycache__/
+.venv/
+result.png
+.DS_Store

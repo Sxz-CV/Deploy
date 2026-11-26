@@ -1,0 +1,10 @@
+path: E:/desktop/deploy/dataset
+train: images/train
+val: images/val
+test: images/test
+
+nc: 2
+
+names:
+  0: fire
+  1: smoke
